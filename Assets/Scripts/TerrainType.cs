@@ -4,13 +4,6 @@ using UnityEngine;
 
 public class TerrainType : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public Texture2D terrainTexture;
+
 }

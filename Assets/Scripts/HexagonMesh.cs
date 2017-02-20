@@ -10,6 +10,7 @@ public class HexagonMesh : MonoBehaviour
     Mesh hexagonMesh;
     MeshCollider meshCollider;
     static List<Vector3> vertices = new List<Vector3>();
+    static List<Vector2> uv = new List<Vector2>();
     List<int> triangles = new List<int>();
 
     void Awake()
@@ -23,12 +24,14 @@ public class HexagonMesh : MonoBehaviour
     {
         hexagonMesh.Clear();
         vertices.Clear();
+        uv.Clear();
         triangles.Clear();
         for (int i = 0; i < cells.Length; i++)
         {
             Triangulate(cells[i]);
         }
         hexagonMesh.vertices = vertices.ToArray();
+        hexagonMesh.uv = uv.ToArray();
         hexagonMesh.triangles = triangles.ToArray();
         hexagonMesh.RecalculateNormals();
         meshCollider.sharedMesh = hexagonMesh;
@@ -301,7 +304,7 @@ public class HexagonMesh : MonoBehaviour
     {
         Vector3 sample = MapGenerator.SampleNoise(position);
         position.x += (sample.x * 2f - 1f ) * HexagonMetrics.perturbationStrength;
-        position.y += (sample.y * 2f - 1f ) * (HexagonMetrics.perturbationStrength/20);
+        //position.y += (sample.y * 2f - 1f ) * (HexagonMetrics.perturbationStrength/20);
         position.z += (sample.z * 2f - 1f ) * HexagonMetrics.perturbationStrength;
         return position;
     }

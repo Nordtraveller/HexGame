@@ -8,11 +8,18 @@ public static class MapGenerator {
 
     public static int GenerateElevation()
     {
-        return Random.Range(0, 5);
+        return Random.Range(0, 4);
     }
 
     public static Vector4 SampleNoise(Vector3 position)
     {
         return noiseSource.GetPixelBilinear(position.x * HexagonMetrics.noiseScale, position.z * HexagonMetrics.noiseScale);
+    }
+
+    public static TerrainType GenerateTerrainType()
+    {
+        TerrainType terrain;
+        terrain = GameObject.Find("Terrain Grassland").GetComponent<TerrainType>();
+        return terrain;
     }
 }

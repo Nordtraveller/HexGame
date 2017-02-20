@@ -142,7 +142,7 @@ public class HexagonGrid : MonoBehaviour {
         position = transform.InverseTransformPoint(position);
         int index = coordinates.X + coordinates.Z * cellCountX + coordinates.Z / 2;
         HexagonCell cell = cells[index];
-        Debug.Log("touched at " + coordinates.ToString() + " elevation is " + cell.GetElevation()) ;
+        Debug.Log("touched at " + coordinates.ToString() + " elevation is " + cell.GetElevation() + " terrain type is " + cell.GetTerrain()) ;
     }
 
 }

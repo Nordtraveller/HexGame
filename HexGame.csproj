@@ -94,6 +94,10 @@
     <Compile Include="Assets\Scripts\HexagonMetrics.cs" />
     <Compile Include="Assets\Scripts\MapGenerator.cs" />
     <Compile Include="Assets\Scripts\TerrainGrassland.cs" />
+    <Compile Include="Assets\Scripts\TerrainHighland.cs" />
+    <Compile Include="Assets\Scripts\TerrainPlain.cs" />
+    <Compile Include="Assets\Scripts\TerrainRiverside.cs" />
+    <Compile Include="Assets\Scripts\TerrainSwamp.cs" />
     <Compile Include="Assets\Scripts\TerrainType.cs" />
   </ItemGroup>
   <ItemGroup>

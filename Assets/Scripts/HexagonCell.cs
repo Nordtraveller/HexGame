@@ -28,6 +28,7 @@ public class HexagonCell : MonoBehaviour {
                 }
             }
         }
+        SetTerrain();
     }
 
     public HexagonCell GetNeighbor(HexagonDirections direction)
@@ -54,6 +55,16 @@ public class HexagonCell : MonoBehaviour {
     public HexagonEdgeType GetEdgeType(HexagonCell other)
     {
         return HexagonMetrics.GetEdgeType(elevation, other.elevation);
+    }
+
+    public void SetTerrain()
+    {
+       terraintype = MapGenerator.GenerateTerrainType();      
+    }
+
+    public TerrainType GetTerrain()
+    {
+        return terraintype;
     }
 
     public Vector3 Position
