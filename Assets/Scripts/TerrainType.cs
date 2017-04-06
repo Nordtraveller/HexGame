@@ -4,6 +4,5 @@ using UnityEngine;
 
 public class TerrainType : MonoBehaviour {
 
-    public Texture2D terrainTexture;
 
 }
